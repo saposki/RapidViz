@@ -1,15 +1,17 @@
 import csv
 
-MY_FILE = '../data/sample.csv'
+MY_FILE = 'data/sample.csv'
+print type(MY_FILE)
+print MY_FILE
 
-def parse(raw_file, delimeter):
-""" parse a raw CSV file to a JSON-line object """
+def parse(raw_file, delimiter):
+    """ parse a raw CSV file to a JSON-line object """
 
     # open csv file
     opened_file = open(raw_file)
 
     # read csv file
-    csv_data = csv.reader(opened_file, delimeter=delimeter)
+    csv_data = csv.reader(opened_file, delimiter=delimiter)
 
     # build data structure
     parsed_data = []
@@ -31,3 +33,7 @@ def main():
 
     # print data
     print   new_data
+
+
+
+# main()
